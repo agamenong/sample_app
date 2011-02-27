@@ -1,16 +1,16 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.1'
-
+gem 'rails', '3.0.4'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
 
 group :development do
-   gem 'rspec-rails', '2.0.0.beta.18'
+   gem 'rspec-rails', '2.5.0'
 end
 
 group :test do
-   gem 'rspec', '2.0.0.beta.18'
-   gem 'spork', '0.8.4'
+   gem 'webrat'
+   gem 'rspec', '2.5.0'
+   gem 'spork', '0.9.0.rc3'
 end
 
