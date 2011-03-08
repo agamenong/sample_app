@@ -22,9 +22,14 @@ describe "Layout Links" do
     response.should have_selector('title', :content => "Help")
   end  
   
-  it "should have a sign up pate at '/signup'" do
+  it "should have a sign up page at '/signup'" do
     get '/signup'
     response.should have_selector('title', :content => "Sign up")
+  end
+
+  it "should have a sign in page at '/signin'" do
+    get '/signin'
+    response.should have_selector('title', :content => "Sign in")
   end
   
   it "should have the rigth links on the layout" do
