@@ -10,7 +10,7 @@ SampleApp::Application.routes.draw do
   match '/help', :to => 'pages#help'
   match '/signup', :to => 'users#new'
   match '/signin', :to => 'sessions#new'
-  match '/signin', :to => 'sessions#destroy'
+  match '/signout', :to => 'sessions#destroy'
   get "pages/home"  
     
   # The priority is based upon order of creation:
