@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   before_filter :correct_user, :only => [:edit,:update]
   
   def index
-    @users = User.all
+    @users = User.paginate(:page => params[:page])
     @title = "All users"
   end
   
@@ -33,7 +33,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id]) 
     @title = "Edit user"    
   end
-  
+
   def update
     @user = User.find(params[:id]) 
     if @user.update_attributes(params[:user])
